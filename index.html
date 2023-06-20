@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Jeu de Nîm</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Jeu de Nîm</h1>
+    <img src="logo.png">
+    <h2>Club Maths Lycée George Sand</h2>
+  </header>
+  <div class="data">
+    <div class="Inputs">
+      <h1>Simulation :</h1>
+      <div class="ligneInput">
+        <p>Nombre de bâtonnets : </p>
+        <input type="text" id="k-batonnets" value="9">
+      </div>
+      <div class="ligneInput">
+        <p>Jouer en premier : </p>
+        <input type="checkbox", id="first">
+      </div>
+      <div class="ligneInput">
+        <p>Moyenne : </p>
+        <input type="text" id="Moyenne" value="1">
+      </div>
+      <button onclick="charger()">Charger</button>
+    </div>
+    <div class="console" id="console">
+
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="chart-container">
+      <canvas id="changeBarCanvas" aria-label="chart" role="img"></canvas>
+    </div>
+    <div class="infos">
+      <h1>Données :</h1>
+      <div class="dataClass">
+        <h2>A la dernière partie :</h2>
+        <p>Nombre de parties jouées : <span id="parties"></span></p>
+        <p>Nombre de changements : <span id="changements"></span></p>
+        <p>Amélioration par partie : <span id="amelioration"></span>%</p>
+      </div>
+      <div class="dataClass">
+        <h2>En moyenne :</h2>
+        <p>Nombre de parties jouées : <span id="partiesM"></span></p>
+        <p>Nombre de changements : <span id="changementsM"></span></p>
+        <p>Amélioration par partie : <span id="ameliorationM"></span>%</p>
+      </div>
+      <div class="dataClass">
+        <h2>Simulation IA : </h2>
+        <p>Il reste <input type="text" id="reste" value="5"> bâtonnet(s). <button onclick="chargerIASimul()">Charger</button></p>
+        <p id="resultReste"></p>
+      </div>
+    </div>
+    
+  </div>
+  <script src="node_modules\chart.js\dist\chart.umd.js"></script> 
+  <script src="script.js"></script>
+</body>
+</html>
